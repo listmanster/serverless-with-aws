@@ -2,12 +2,13 @@ service: serverless
 
 provider:
   name: aws
-  runtime: nodejs8.10
-  profile: femasters
+  runtime: nodejs10.x
   region: us-west-1
   stage: dev
 
 plugins:
   - serverless-offline
 
-    
+functions:
+  helloworld:
+    handler: src/helloworld.handler
